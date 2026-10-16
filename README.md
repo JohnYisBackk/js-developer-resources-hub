@@ -8,7 +8,7 @@ Discover useful developer tools, documentation, learning platforms and resources
 
 ## 🚀 Live Demo
 
-🔗
+🔗 https://johnyisbackk.github.io/js-developer-resources-hub/
 
 ---
 
