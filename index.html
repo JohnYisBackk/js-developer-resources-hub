@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Developer Resources Hub PRO - Discover useful developer tools, documentation and learning resources."
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Developer Resources Hub</title>
+  </head>
+  <body>
+    <!-- ====================================================== -->
+    <!-- BACKGROUND -->
+    <!-- ====================================================== -->
+
+    <div class="background-grid"></div>
+    <div class="background-glow background-glow-one"></div>
+    <div class="background-glow background-glow-two"></div>
+
+    <!-- ====================================================== -->
+    <!-- HEADER -->
+    <!-- ====================================================== -->
+
+    <header class="header">
+      <a href="#" class="logo">
+        <i class="bi bi-code-slash"></i>
+
+        <div class="logo-content">
+          <h2>Developer Resources Hub <span>PRO</span></h2>
+          <p>
+            Discover the best tools, docs and learning resources in one place.
+          </p>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#" class="nav-link active" data-link="home">
+          <i class="bi bi-house-fill"></i>
+          Home
+        </a>
+
+        <a href="#" class="nav-link" data-link="resources">
+          <i class="bi bi-journal-code"></i>
+          Resources
+        </a>
+
+        <a href="#" class="nav-link" data-link="categories">
+          <i class="bi bi-grid"></i>
+          Categories
+        </a>
+
+        <a href="#" class="nav-link" data-link="favorites">
+          <i class="bi bi-heart"></i>
+          Favorites
+        </a>
+
+        <a href="#" class="nav-link" data-link="about">
+          <i class="bi bi-info-circle"></i>
+          About
+        </a>
+      </nav>
+
+      <button
+        class="theme-button"
+        id="themeBtn"
+        type="button"
+        aria-label="Theme toggle"
+      >
+        <i class="bi bi-sun-fill"></i>
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+
+      <div class="profile-box">
+        <i class="bi bi-person-circle"></i>
+
+        <div class="profile-box-content">
+          <span>Dev</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-left"></div>
+      <!-- ====================================================== -->
+      <!-- HERO SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="hero-section">
+        <div class="hero-left">
+          <div class="hero-badge">
+            <i class="bi bi-code-square"></i>
+            <p>Curated for developers</p>
+          </div>
+
+          <div class="hero-content">
+            <h1>Discover. <span>Learn. Build. Grow.</span></h1>
+            <p>
+              A handpicked collection of the best developer tools, documentation
+              and learning resources to level up your skills.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#" class="hero-button primary">
+              <i class="bi bi-compass"></i>
+              Explore Resources
+            </a>
+
+            <a href="#" class="hero-button secondary">
+              <i class="bi bi-play-circle-fill"></i>
+              Watch Demo
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-box">
+          <img
+            src="images/hero-image.jpg"
+            alt="Developer resources dashboard preview"
+          />
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- STATS SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="stats-section">
+        <div class="stat-boxes">
+          <div class="stat-box">
+            <i class="bi bi-collection"></i>
+            <div class="stat-content">
+              <span id="resourcesValue">120+</span>
+              <strong>Resources</strong>
+              <p>Carefully curated</p>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <i class="bi bi-grid"></i>
+            <div class="stat-content">
+              <span id="categoriesValue">7</span>
+              <strong>Categories</strong>
+              <p>Explore by topics</p>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <i class="bi bi-heart"></i>
+            <div class="stat-content">
+              <span id="favoriteToolsValue">25</span>
+              <strong>Favorite Tools</strong>
+              <p>Saved by you</p>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <i class="bi bi-graph-up-arrow"></i>
+            <div class="stat-content">
+              <span id="trendingValue">10</span>
+              <strong>Trending</strong>
+              <p>Popular this week</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- SEARCH & CATEGORIES SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="filters-section">
+        <div class="search-box">
+          <i class="bi bi-search"></i>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for tools, documentation, tutorials, etc..."
+            autocomplete="off"
+          />
+
+          <div class="search-shortcut">
+            <i class="bi bi-command"></i>
+            <span>K</span>
+          </div>
+        </div>
+
+        <div class="categories-filter">
+          <button
+            class="category-button active"
+            type="button"
+            data-category="all"
+          >
+            <i class="bi bi-stars"></i>
+            <span>All</span>
+          </button>
+
+          <button
+            class="category-button"
+            type="button"
+            data-category="javascript"
+          >
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="css">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="react">
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="apis">
+            <i class="bi bi-link-45deg"></i>
+            <span>APIs</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="tools">
+            <i class="bi bi-wrench"></i>
+            <span>Tools</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="design">
+            <i class="devicon-figma-plain colored"></i>
+            <span>Design</span>
+          </button>
+
+          <button
+            class="category-button"
+            type="button"
+            data-category="learning"
+          >
+            <i class="bi bi-book"></i>
+            <span>Learning</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- FEATURED RESOURCES SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="featured-section">
+        <div class="featured-header">
+          <div class="featured-title">
+            <div class="featured-heading">
+              <i class="bi bi-star-fill"></i>
+              <h2>Featured Resources</h2>
+            </div>
+
+            <p>
+              Handpicked tools and platforms that every developer should know
+              about.
+            </p>
+          </div>
+
+          <button
+            class="view-all-button"
+            id="viewAllResourcesBtn"
+            type="button"
+          >
+            <span> View All</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="resources-grid" id="resourcesGrid">
+          <!-- RESOURCE CARDS RENDERED WITH JAVASCRIPT -->
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- TRENDING RESOURCES SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="trending-section">
+        <div class="trending-header">
+          <div>
+            <i class="bi bi-fire"></i>
+            <h3>Trending This Week</h3>
+          </div>
+
+          <button class="trending-arrow-icon" type="button">
+            View All
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="trending-items">
+          <div class="trending-item">
+            <span class="trending-rank">1</span>
+
+            <div class="trending-icon">
+              <i class="devicon-nextjs-plain"></i>
+            </div>
+
+            <div class="trending-content">
+              <strong>Next.js</strong>
+              <p>The React Framework for the Web</p>
+            </div>
+
+            <div class="trending-growth">
+              <i class="bi bi-arrow-up"></i>
+              <span>2.4K</span>
+            </div>
+          </div>
+
+          <div class="trending-item">
+            <span class="trending-rank">2</span>
+
+            <div class="trending-icon">
+              <i class="devicon-tailwindcss-original colored"></i>
+            </div>
+
+            <div class="trending-content">
+              <strong>Tailwind CSS</strong>
+              <p>Utility-first CSS framework</p>
+            </div>
+
+            <div class="trending-growth">
+              <i class="bi bi-arrow-up"></i>
+              <span>1.8K</span>
+            </div>
+          </div>
+
+          <div class="trending-item">
+            <span class="trending-rank">3</span>
+
+            <div class="trending-icon">
+              <i class="bi bi-robot"></i>
+            </div>
+
+            <div class="trending-content">
+              <strong>ChatGPT</strong>
+              <p>AI assistant for developers</p>
+            </div>
+
+            <div class="trending-growth">
+              <i class="bi bi-arrow-up"></i>
+              <span>1.6K</span>
+            </div>
+          </div>
+
+          <div class="trending-item">
+            <span class="trending-rank">4</span>
+
+            <div class="trending-icon">
+              <i class="devicon-vercel-original"></i>
+            </div>
+
+            <div class="trending-content">
+              <strong>Vercel</strong>
+              <p>Deploy frontend projects with ease</p>
+            </div>
+
+            <div class="trending-growth">
+              <i class="bi bi-arrow-up"></i>
+              <span>1.4K</span>
+            </div>
+          </div>
+
+          <div class="trending-item">
+            <span class="trending-rank">5</span>
+
+            <div class="trending-icon">
+              <i class="devicon-figma-plain colored"></i>
+            </div>
+
+            <div class="trending-content">
+              <strong>Figma</strong>
+              <p>Collaborative interface design tool</p>
+            </div>
+
+            <div class="trending-growth">
+              <i class="bi bi-arrow-up"></i>
+              <span>1.2K</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- NEWSLETTER SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="newsletter-section">
+        <div class="newsletter-header">
+          <i class="bi bi-envelope-paper-fill"></i>
+          <h2>Stay Updated</h2>
+        </div>
+
+        <p class="newsletter-text">
+          Get the latest developer resources, tools and tips delivered to your
+          inbox.
+        </p>
+
+        <div class="newsletter-input-box">
+          <input
+            type="email"
+            id="newsletterInput"
+            placeholder="Enter your email address"
+            autocomplete="off"
+          />
+
+          <button class="newsletter-button" type="submit">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="newsletter-image">
+          <img
+            src="images/newsletter-image.jpg"
+            alt="Developer newsletter illustration"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- ====================================================== -->
+    <!-- FOOTER -->
+    <!-- ====================================================== -->
+
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <i class="bi bi-code-slash"></i>
+
+            <div>
+              <h2>Developer Resources Hub <span>PRO</span></h2>
+              <p>
+                Curated tools, documentation and learning resources for modern
+                developers.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+
+          <a href="#">Home</a>
+          <a href="#">Resources</a>
+          <a href="#">Categories</a>
+          <a href="#">Favorites</a>
+          <a href="#">About</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Categories</h3>
+
+          <a href="#">JavaScript</a>
+          <a href="#">CSS</a>
+          <a href="#">React</a>
+          <a href="#">APIs</a>
+          <a href="#">Tools</a>
+          <a href="#">Design</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Connect</h3>
+
+          <div class="footer-socials">
+            <a
+              href="https://github.com/JohnyIsBackk"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a
+              href="https://samueljahn.sk"
+              target="_blank"
+              aria-label="Portfolio"
+            >
+              <i class="bi bi-globe2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 JohnyIsBackk. All rights reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
